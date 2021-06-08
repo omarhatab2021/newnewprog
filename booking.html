@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="discribtion" content="welecome">
+     <!-- start IE combability meta -->
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <!-- start viewport mobile -->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>My website booking now our flight</title>
+     <!-- google fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Amaranth:ital,wght@0,400;0,700;1,400;1,700&family=Karantina:wght@300;400;700&display=swap" rel="stylesheet">
+     <!-- end google fonts -->
+     <!-- start for date dropper -->
+     <link href="css/datedropper.css" rel="stylesheet"/>
+     <link href="css/my-style.css" rel="stylesheet"/>
+     <script src="js/jquery-1.10.2.min.js"></script>
+     <script src="js/datedropper.js"></script>
+     <!-- end for date dropper -->
+     <!-- start normalization -->
+     <link rel="stylesheet" href="css/normalize.css">
+     <!-- start webfonts -->
+     <link rel="stylesheet" href="./css/all.min.css">
+     <!-- start bootstrap -->
+     <link rel="stylesheet" href="./css/bootstrap.min.css">
+     <!-- start style css -->
+     <link rel="stylesheet" href="./css/probook.css">
+
+</head>
+
+     <body>
+          <div class="loader-main" id="loadingMain">
+               <div class="loader2"><img src="images/Settings (1).gif" alt="#" /></div>
+          </div>
+          <section id="booking">
+               <div class="container" id="overHidden">
+                    <div class="check-form" id="checkForm">
+                         <div class="heading">
+                              <p>where <br> do you want to</p>
+                              <h1>Explore.</h1>
+                         </div>
+                         <div class="form-book ">
+                              <div class="container-fluid">
+                              <!-- start row -->
+                              <div class="row">
+                                   <!-- start col -->
+                                   <div class="col-12 px-1">
+                                        <div class="btn-group btn-group-toggle rounded-pill mb-2" data-toggle="buttons">
+                                             <label class="btn btn-secondary px-4 active btn-radio">
+                                             <input type="radio" name="options" id="option1" checked> Round trip
+                                             </label>
+                                             <label class="btn btn-secondary px-4 btn-radio">
+                                             <input type="radio" name="options" id="option2"> One way
+                                             </label>
+                                        </div> 
+                                   </div>
+                                   <!-- end col -->
+                                   <!-- start col -->
+                                   <div class="col-12 col-lg-10 px-1">
+                                        <div class="inputs-form">
+                                             <div class="top">
+                                                  <!-- start input airport in -->
+                                                  <input id="airportIn" class="airport rounded" type= "text" placeholder="   Airport in">
+                                                  <span class="icon-air"><i class="fas fa-plane-departure"></i></span>
+                                                  <span id="exchange"><i class="fas fa-exchange-alt"></i></span>
+                                                  <div class="show" id="showIn">
+                                                       <input list="airporto" id="airportInsideIn" class="air-inside" type= "text" placeholder="   Airport in">
+                                                       <h5 class="my-2">The nearest airport </h5>
+                                                       <ul class="list-group list-group-flush" id="airportListIn">
+                                                            <li class="list-group-item">Cairo International Airport</li>
+                                                            <li class="list-group-item">Egypt Old Airport</li>
+                                                            <li class="list-group-item">Alexandria International Airport</li>
+                                                            <li class="list-group-item">Port Said International Airport</li>
+                                                            <li class="list-group-item">Sphinx Airport</li>
+                                                            <li class="list-group-item">Borg El Arab International Airport, Alexandria</li>
+                                                       </ul>
+                                                  </div>
+                                                  <!-- end input airport in -->
+                                                  <!-- start input airport out -->
+                                                  <input id="airportOut" class="airport rounded" type= "text" placeholder="   Airport out">
+                                                  <span class="icon-air icon-out"><i class="fas fa-plane-departure"></i></span>
+                                                  <div class="show showOut" id="showOut">
+                                                       <input id="airportInsideOut" class="air-inside" type= "text" placeholder="   Airport in">
+                                                       <h5 class="my-2">The nearest airport </h5>
+                                                       <ul class="list-group list-group-flush" id="airportListOut">
+                                                            <li class="list-group-item">Kuwait International Airport</li>
+                                                            <li class="list-group-item">Dubai International Airport</li>
+                                                            <li class="list-group-item">Saudi Arabian Airport</li>
+                                                            <li class="list-group-item">Embassy Of The United States Of America, Cairo</li>
+                                                            <li class="list-group-item">Doha Airport Arrivals Building</li>
+                                                            <li class="list-group-item">Queen Alia International Airport</li>
+                                                       </ul>
+                                                  </div>
+                                                  <!-- end input airport out -->
+                                             </div>
+                                             <!-- end top div -->
+                                             <!-- start bottom div -->
+                                             <div class="bottom">
+                                                  <!-- start input time in -->
+                                                  <input class="my-2 rounded" id="timeIn" type="text" data-large-mode="true" data-large-default="true" data-lock="from" data-translate-mode="true" data-theme="my-style"/>
+                                                  <span class="date-icon"><i class="far fa-calendar-alt"></i></span>
+                                                  <!-- end input time in -->
+                                                  <!-- start input time out -->
+                                                  <input class="my-2 rounded" id="timeOut" type="text" data-large-mode="true" data-large-default="true" data-lock="from" data-translate-mode="true" data-theme="my-style"/>
+                                                  <span class="date-icon date-icon-out"><i class="far fa-calendar-alt"></i></span>
+                                                  <!-- end input time out -->   
+                                                  <!-- start counter input -->
+                                                  <button type="button" class="btn btn-primary dropdown-toggle ctr-btn" id = "adultBtn">adults</button>
+                                                  <div class="show-counter" id="showCounter">
+                                                       <div class="counter-inside text-center">
+                                                            <div class="left">
+                                                                 <span class="align-self-center"><i class="fas fa-male mx-2 "></i>  Adults &gt; 12 </span>
+                                                            </div>
+                                                            <div class="right">
+                                                                 <button id="sub" class="btn-count">-</button>
+                                                                 <input type="text" id="qtyBox" readonly="" value="0" class="counter">
+                                                                 <button id="add" class="btn-count">+</button>
+                                                            </div>
+                                                            <!-- second childern -->
+                                                            <div class="left">
+                                                                 <span class="align-self-center"><i class="fas fa-male mx-2 "></i>  Child &lt; 12 </span>
+                                                            </div>
+                                                            <div class="right">
+                                                                 <button id="sub1" class="btn-count">-</button>
+                                                                 <input type="text" id="qtyBox1" readonly="" value="0" class="counter">
+                                                                 <button id="add1" class="btn-count">+</button>
+                                                            </div>
+                                                            <!-- second childern -->
+                                                            <div class="left">
+                                                                 <span class="align-self-center"><i class="fas fa-male mx-2 "></i>  Infants &lt; 2 </span>
+                                                            </div>
+                                                            <div class="right">
+                                                                 <button id="sub2" class="btn-count">-</button>
+                                                                 <input type="text" id="qtyBox2" readonly="" value="0" class="counter">
+                                                                 <button id="add2" class="btn-count">+</button>
+                                                            </div>
+                                                            <button type="button" class="btn btn-dark rounded-pill mx-auto mt-1" id="counterDone">Done</button>
+                                                       </div>
+                                                  </div>
+                                                  <!-- end counter input -->
+                                                  <button type="button" class="btn btn-primary dropdown-toggle bussness-btn" id="EconomyInput">Economy</button>
+                                                  <div class="busness-show" id= "Economy">
+                                                       <ul class="list-unstyled">
+                                                            <li> <i class="fas fa-check m-2 text-danger active"></i> Economy</li>
+                                                            <li> <i class="fas fa-check m-2 text-success"></i> prim Economy</li>
+                                                            <li><i class="fas fa-check m-2 text-success"></i> Bussness class</li>
+                                                            <li><i class="fas fa-check m-2 text-success"></i> First class</li>
+                                                       </ul>
+                                                  </div>
+                                             </div>
+                                             <!-- end bottom div -->
+                                        </div>
+                                   </div>
+                                   <!-- end col -->
+                                   <!-- start col -->
+                                   <div class="col-12 col-lg-2 px-1">
+                                        <div class="submit" id=search>
+                                             <a href="#planes" class="search-planes rounded"> 
+                                                  <span></span>
+                                                  <span></span>
+                                                  <span></span>
+                                                  <span></span>
+                                                  Search
+                                             </a>                         
+                                        </div>
+                                   </div>
+                                   <!-- end col -->
+                              </div>
+                              <!-- end row -->
+                         </div>
+                         </div>
+                    </div>
+                    <div class="planes" id="planes">
+                         <div class="loader_bg" id="loading">
+                              <div class="loader"><img src="images/loading.gif" alt="#" /></div>
+                         </div>
+               </div>
+               
+
+          </section>
+          <script>
+          $('#timeIn').dateDropper();
+          $('#timeOut').dateDropper();
+          </script>
+
+
+          <!-- start jqueery -->
+          <script src="js/jquery-3.5.1.slim.min.js"></script>
+          <script src="js/popper.min.js"></script>
+          <script src="js/bootstrap.js"></script>
+          <script src="js/proj.js"></script>
+     </body>
+
+</html>     
