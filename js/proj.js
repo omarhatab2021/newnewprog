@@ -29,7 +29,7 @@ $(function ( ) {
           myContainerHidden = document.getElementById('overHidden'),
           myCheckForm = document.getElementById('checkForm'),
           myloadingMain = document.getElementById('loadingMain');
-     console.log(myPlanes)
+               console.log(myPlanes)
 
      // start onload --------
      window.onload = function(){
