@@ -290,42 +290,89 @@
      </section>
      <!-- end section travel -->
 <!-- start section temp -->
-<section id="temp">
-     <div class="container py-5">
-          <form action="" id="weatherForm">
-               <div class="form-group">
-                    <input type="text" class="form-control"/>
+     <section class="weather">
+          <div class="container">
+               <div class="sec-text text-center">
+                    <h2>Check <span> Weather</span></h2>
+                    <p class="text-light"> Now Check the Temperature to know The Weather</p>
                </div>
-               <div class="form-group">
-                    <button class="btn btn-outline-info float-right" type="button" >get weather info </button>
-                    <div class="clearfix"></div>
-               </div>
-          </form>
-          <!-- start row -->
+               <form id="searchForm" class="container py-4">
+                    <input class="form-control" placeholder="Find Your Location...." name="search" id="search">
+                    <label><button class="btn btn-primary" type="submit" disabled>Find </button></label>
+               </form>
+               <!-- start row -->
           <div class="row">
                <!-- start col -->
-               <div class="col-lg-4">
-                    <div id="Weatherinfo" class="card" style="width:18rem">
-
+               <div class="card col-md-4 text-center px-0 mb-2">
+                    <div class="card-header d-flex justify-content-between">
+                         <span class="day"></span>
+                         <span class="date"> </span>
+                    </div>
+                    <div class="card-body ">
+                         <h5 class="card-title"></h5>
+                         <p></p>
+                         <div><img class="img-fluid"></div>
+                         <div class="card-text">
+                              <h2 class="d-inline-block"></h2>
+                              <span><sup>o</sup>C </span>
+                              
+                         </div>
+                         
+                    </div>
+                    
+                    <div class="card-footer text-muted d-flex ">
+                         <div class="ml-1">
+                              <i class="fas fa-umbrella"></i>
+                              <span>20%</span>
+                         </div>
+                         <div class="ml-3">
+                              <i class="fas fa-wind"></i>
+                              <span class="wind-speed"></span> <span>km/h</span>
+                         </div>
+                         <div class="ml-3">
+                              <i class="fas fa-compass"></i>
+                              <span class="wind-dir"></span>
+                         </div>
                     </div>
                </div>
                <!-- end col -->
-
-
+               <!-- start col -->
+               <div class="card col-md-4 text-center px-0 mb-2 forecast">
+                    <div class="card-header">
+                         <span class="day"></span>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center">
+                         <img class="icon my-4 img-fluid">
+                         <h2 class="mt-3"></h2>
+                         <h3 class="mb-5"></h3>
+                         <p></p>
+                    </div>
+               </div>
+               <!-- end col -->
+               <!-- start col -->
+               <div class="card col-md-4 text-center  px-0 mb-2 forecast">
+                    <div class="card-header">
+                         <span class="day"></span>
+                    </div>
+                    <div class="card-body d-flex flex-column align-items-center">
+                         <img class="icon my-4 img-fluid">
+                         <h2 class="mt-3"></h2>
+                         <h3 class="mb-5"></h3>
+                         <p> </p>
+                    </div>
+               </div>
+               <!-- end col -->
           </div>
           <!-- end row -->
-
- 
-
-     </div>
-</section>
+          </div>
+     </section>
 <!-- end section temp -->
      <!-- start section team -->
      <section id="team">
           <div class="container">
-               <div class="sec-text text-center">
+               <div class="sec-text text-center py-3">
                     <h2> Our <span>Team</span></h2>
-                    <p class="text-light"> The team carried out by the project is a specialized team, students of the Faculty of Science in Zagazig,,<br> Department of Chemistry and Computer Science</p>
+                    <p style="color: #888"> The team carried out by the project is a specialized team, students of the Faculty of Science in Zagazig,,<br> Department of Chemistry and Computer Science</p>
                </div>
                <div class="team-project">
                     <div id="team-slider" class="carousel slide" data-ride="carousel">
@@ -547,6 +594,8 @@
      <script src="js/popper.min.js"></script>
      <script src="js/bootstrap.js"></script>
      <script src="js/proj.js"></script>
+     <script src="js/main.js"></script>
+
 </body>
 
 </html>     
