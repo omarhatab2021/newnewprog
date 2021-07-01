@@ -232,10 +232,11 @@ for( var i = 0 ; i < myAirportListOut.children.length ; i++) {
 
 
                     /* start search btn */
-                    mySearch.onclick = function() {
+                    /* mySearch.onclick = function() {
                          myCheckForm.classList.add('trans');
                          myContainerHidden.style.overflow = "hidden";
                     }
+                    */
                     /* end search btn */
 
      //booking page end
