@@ -79,29 +79,6 @@
 }
 
 /* start counter button */
-.ctr-btn {
-     background-color: #0f0f0fdb;
-     border-color: #96AFC3;
-     outline: none;
-     width: 300px;
-     padding: 19px;
-}
-.ctr-btn:hover {
-     background-color:#96AFC3;
-     border-color: #96AFC3;
-}
-.ctr-btn:focus {
-     background-color:#96AFC3;
-     border-color: #96AFC3;
-     box-shadow: 0px 0px 5px  #FFF;
-
-}
-.ctr-btn:active {
-     background-color:#96AFC3 !important;
-     border-color: #96AFC3 !important;
-     box-shadow: 0px 0px 5px  #FFF;
-
-}
 .show-counter {
      background-color: rgb(0 0 0);
      width: 100%;
@@ -116,6 +93,7 @@
      flex-wrap: wrap;
 }
 .btn-count {
+     display: inline-block;
      width: 30px;
      height: 30px;
      font-size: 1.5rem;
