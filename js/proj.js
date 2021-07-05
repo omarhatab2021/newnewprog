@@ -7,6 +7,7 @@ $(function ( ) {
 })
 
 
+
 // booking page start
      var myAirportIn = document.getElementById('airportIn'),
           myAirportOut = document.getElementById('airportOut'),
@@ -18,9 +19,6 @@ $(function ( ) {
           myTimeIn = document.getElementById('timeIn'),
           mypickerIn = document.querySelector('.picker'),
           myTimeOut = document.getElementById('timeOut'),
-          myAdultBnt = document.getElementById('adultBtn'),
-          myShowCounter = document.getElementById('showCounter'),
-          myDone = document.getElementById('counterDone'),
           myEconamy = document.getElementById('Economy'),
           myEconamyBtn = document.getElementById('EconomyInput'),
           myShowOut = document.getElementById('showOut'),
@@ -29,7 +27,6 @@ $(function ( ) {
           myContainerHidden = document.getElementById('overHidden'),
           myCheckForm = document.getElementById('checkForm'),
           myloadingMain = document.getElementById('loadingMain');
-               console.log(myPlanes)
 
      // start onload --------
      window.onload = function(){
@@ -144,90 +141,7 @@ for( var i = 0 ; i < myAirportListOut.children.length ; i++) {
      }
 
           
-     //--------counter input -------
-     let addBtn = document.querySelector('#add');
-     let subBtn = document.querySelector('#sub');
-     let qty = document.querySelector('#qtyBox');
      
-     addBtn.addEventListener('click',()=>{
-          qty.value = parseInt(qty.value) + 1;
-     });
-
-     subBtn.addEventListener('click',()=>{
-          if (qty.value <= 0) {
-               qty.value = 0;
-          }
-          else{
-               qty.value = parseInt(qty.value) - 1;
-          }
-     });
-          //--------counter input -------
-          let addBtn1 = document.querySelector('#add1');
-          let subBtn1 = document.querySelector('#sub1');
-          let qty1 = document.querySelector('#qtyBox1');
-          
-          addBtn1.addEventListener('click',()=>{
-               qty1.value = parseInt(qty1.value) + 1;
-          });
-     
-          subBtn1.addEventListener('click',()=>{
-               if (qty1.value <= 0) {
-                    qty1.value = 0;
-               }
-               else{
-                    qty1.value = parseInt(qty1.value) - 1;
-               }
-          });
-
-                    //--------counter input -------
-                    let addBtn2 = document.querySelector('#add2');
-                    let subBtn2 = document.querySelector('#sub2');
-                    let qty2 = document.querySelector('#qtyBox2');
-                    
-                    addBtn2.addEventListener('click',()=>{
-                         qty2.value = parseInt(qty2.value) + 1;
-                    });
-               
-                    subBtn2.addEventListener('click',()=>{
-                         if (qty2.value <= 0) {
-                              qty2.value = 0;
-                         }
-                         else{
-                              qty2.value = parseInt(qty2.value) - 1;
-                         }
-                    });
-
-                    // ------adultsBtn ------- 
-                    myAdultBnt.onclick=function(){
-                         myShowCounter.style.display = "block";
-                         myShowCounter.style.transition = "all 0.4s";
-                         myEconamy.style.display = "none";
-
-
-                    }
-                    myDone.onclick=function(){
-                         myShowCounter.style.display = "none";
-                         myShowCounter.style.transition = "all 0.4s";
-                         myEconamy.style.display = "none";
-
-                    }
-
-
-                    //--------input degree -------
-                    myEconamyBtn.onclick = function() {
-                         myEconamy.style.display = "block";
-                         myShowCounter.style.display = "none";
-                         myShowIn.style.display = "none";
-                         myShowOut.style.display = "none";
-                    }
-
-                    for( var x = 0 ; x < myEconamy.firstElementChild.children.length ; x++) {
-                         myEconamy.firstElementChild.children[x].onclick = function() { 
-                              myEconamyBtn.innerHTML = this.textContent;
-                              myEconamy.style.display = "none";
-                         }
-                    }
-
 
 
 
