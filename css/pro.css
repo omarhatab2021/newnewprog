@@ -47,7 +47,7 @@ body {
 .navbar .content {
      display: flex;
      flex-direction: row;
-     flex-wrap: wrap;
+     flex-wrap: nowrap;
      width: 100%;
      text-align: right;
      align-items: center;
@@ -97,6 +97,51 @@ body {
      -ms-transition: all 0.4s;
      -o-transition: all 0.4s;
 }
+/* start search box */
+
+
+
+
+.search-box .input {
+     border: 3px solid #0ed1f2;
+     outline: none;
+     border-radius: 50px;
+     font-size: 18px;
+     color: #29313a;
+     width: 0px;
+     padding: 4px 0px 4px 15px;
+     transition: all 0.8s ease;
+     position: absolute;
+     right: 3%;
+     top: 10%;
+}
+
+.search-box .btn {
+     position: absolute;
+     width: 45px;
+     height: 45px;
+     background: #0ed1f2;
+     border-radius: 50%;
+     right: 2%;
+     top: 3px;
+     cursor: pointer;
+     font-size: 1rem;
+     color: #fff;
+     transition: all 0.8s ease;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+
+}
+.search-box .input.active {
+     width: 250px;
+     right: 50px;
+}
+.search-box .btn.animate {
+     transform: rotate(-360deg);
+     right: 50px;
+}
+/* end search box */
 .navbar .content .item .navbar-nav li a {
      color: #FFF;
      padding : 15px 20px;
@@ -184,18 +229,15 @@ body {
      background-size: cover;
      background-repeat: no-repeat;
      background-position: center;
+     position: relative;
 }
 #home .carousel .carousel-inner .carousel-item:first-of-type{
      background-image: url(../images/Slider/1.jpg);
 }
 #home .carousel .carousel-inner .carousel-item:nth-of-type(2){
-     background-color: rgba(2, 2, 4, 0.296);
-     background-blend-mode: overlay;
      background-image: url(../images/Slider/2.jpg);
 }
 #home .carousel .carousel-inner .carousel-item:nth-of-type(3){
-     background-color: rgba(2, 2, 4, 0.296);
-     background-blend-mode: overlay;
      background-image: url(../images/Slider/3.jpg);
 }
 #home .carousel .carousel-inner .carousel-item:last-of-type{
@@ -373,7 +415,6 @@ body {
      background-color: #FFF;
 }
 #about .row .text-one {
-     background-color: #FFF;
      font-size: 1rem;
      color: #000;
 
@@ -506,8 +547,8 @@ body {
      background-color: #FFF;  /* fallback for old browsers */
      padding: 20px 0px;
 }
-#team .carousel {
-     overflow: hidden;
+#team .carousel-item {
+     width: 100%;
 }
 #team .carousel .carousel-item .caption-team {
      padding: 10px;
@@ -550,7 +591,7 @@ body {
 }
 #team .carousel .prev-control {
      top: 35%;
-     left: -3px ;
+     left: 0px ;
      transform: translateY(-50%) ;
      -webkit-transform: translateY(-50%) ;
      -moz-transform: translateY(-50%) ;
@@ -559,7 +600,7 @@ body {
 }
 #team .carousel .next-control {
      top: 35%;
-     right: -3px ;
+     right: 0px ;
      transform: translateY(-50%) ;
      -webkit-transform: translateY(-50%) ;
      -moz-transform: translateY(-50%) ;

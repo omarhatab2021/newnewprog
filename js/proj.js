@@ -50,7 +50,11 @@ $(function ( ) {
      })
      }) 
           
-
+     $(".btn").click(function(){
+          $(".input").toggleClass("active").focus;
+          $(this).toggleClass("animate");
+          $(".input").val("");
+        });
      
      // end onload --------
 // start input airport in---------
